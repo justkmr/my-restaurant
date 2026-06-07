@@ -1,90 +1,520 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Spice Route | Restaurant</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Header / Navbar -->
+    <title>The Spice Route :- Restaurant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <header>
-        <div class="logo">Spice<span>Route</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">Spice<span>Route</span></div>
+
+      <div class="menu-toggle" id="menuToggle">☰</div>
+
+      <nav id="navbar">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Delicious Food For Your Cravings</h1>
-            <p>Experience the finest blend of spices and fresh ingredients cooked by top chefs.</p>
-            <a href="#menu" class="btn">Explore Menu</a>
+    <section class="hero" id="home">
+      <div class="overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-tag"> 🍽️ Fine Dining Experience </span>
+
+        <h1>
+          Taste The Art <br />
+          Of Fine Dining
+        </h1>
+
+        <p>
+          Discover handcrafted dishes made with the finest ingredients, served
+          in an atmosphere designed for unforgettable moments.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="btn primary-btn"> View Menu </a>
+
+          <a href="#contact" class="btn secondary-btn"> Book Table </a>
         </div>
+
+        <div class="hero-stats">
+          <div>
+            <h3>10K+</h3>
+            <span>Happy Guests</span>
+          </div>
+
+          <div>
+            <h3>50+</h3>
+            <span>Signature Dishes</span>
+          </div>
+
+          <div>
+            <h3>4.9★</h3>
+            <span>Customer Rating</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Menu Section -->
+  <div class="floating-card">
+  <i class="fa-solid fa-star"></i>
+  <span>Rated #1 Restaurant In The City</span>
+</div>
+
+    <section class="stats">
+      <div class="stat-card">
+        <div class="stat-icon">🍽️</div>
+        <h2>10K+</h2>
+        <p>Happy Customers</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">👨‍🍳</div>
+        <h2>50+</h2>
+        <p>Signature Dishes</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <h2>4.9</h2>
+        <p>Customer Rating</p>
+      </div>
+    </section>
+
+    <div class="menu-filter">
+      <button class="filter-btn active" data-filter="all">🍽️ All</button>
+
+      <button class="filter-btn" data-filter="pizza">🍕 Pizza</button>
+
+      <button class="filter-btn" data-filter="burger">🍔 Burger</button>
+
+      <button class="filter-btn" data-filter="pasta">🍝 Pasta</button>
+
+      <button class="filter-btn" data-filter="dessert">🍰 Dessert</button>
+
+      <button class="filter-btn" data-filter="chicken">🍗 Chicken</button>
+    </div>
+
     <section id="menu" class="menu-section">
-        <h2>Our Special Menu</h2>
-        <p class="sub-heading">Check out our most popular dishes</p>
-        
-        <!-- Filter Buttons (Controlled by JS) -->
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="starter">Starters</button>
-            <button class="filter-btn" data-filter="main">Main Course</button>
-            <button class="filter-btn" data-filter="dessert">Desserts</button>
+      <div class="section-header">
+        <span class="menu-tag">Chef's Selection</span>
+        <h2>Our Signature Dishes</h2>
+        <p>Crafted with fresh ingredients and authentic flavors.</p>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Card 1 -->
+        <div class="menu-card" data-category="burger">
+          <span class="food-badge">Popular</span>
+
+          <img src="/assets/images/burger.avif" alt="Burger" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Classic Burger</h3>
+              <span class="price">₹140</span>
+            </div>
+
+            <p>Juicy grilled beef with cheese and fresh vegetables.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.8</span>
+              <button>Order Now</button>
+            </div>
+          </div>
         </div>
 
-        <!-- Dynamic Menu Container -->
-        <div class="menu-container" id="menu-grid">
-            <!-- Items will be injected by JavaScript -->
+        <!-- Card 2 -->
+        <div class="menu-card" data-category="pizza">
+          <span class="food-badge">Best Seller</span>
+
+          <img src="/assets/images/italian-pizza.avif" alt="Pizza" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Italian Pizza</h3>
+              <span class="price">₹150</span>
+            </div>
+
+            <p>Wood-fired pizza topped with mozzarella and basil.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.9</span>
+              <button>Order Now</button>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>We started our journey in 2020 with a single mission: to serve authentic, mouth-watering food that brings people together. Our ingredients are sourced daily from local organic farms to ensure the highest quality.</p>
+        <!-- Card 3 -->
+        <div class="menu-card" data-category="chicken">
+          <span class="food-badge">Chef Choice</span>
+
+          <img src="/assets/images/special.jpeg" alt="Steak" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Premium Steak</h3>
+              <span class="price">₹240</span>
+            </div>
+
+            <p>Perfectly grilled steak with herb butter sauce.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 5.0</span>
+              <button>Order Now</button>
+            </div>
+          </div>
         </div>
+
+        <!-- Card 4 -->
+        <div class="menu-card" data-category="pasta">
+          <span class="food-badge">New</span>
+
+          <img src="/assets/images/creamy-pasta.avif" alt="Pasta" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Creamy Pasta</h3>
+              <span class="price">₹180</span>
+            </div>
+
+            <p>Rich creamy pasta loaded with parmesan cheese.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.7</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="menu-card" data-category="chicken">
+          <span class="food-badge">Popular</span>
+
+          <img src="/assets/images/biryani.avif" alt="Chicken Biryani" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Chicken Biryani</h3>
+              <span class="price">₹160</span>
+            </div>
+
+            <p>Traditional aromatic biryani cooked with rich spices.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.8</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="menu-card" data-category="chicken">
+          <span class="food-badge">Hot</span>
+
+          <img
+            src="/assets/images/grilled-chickeen.avif"
+            alt="Grilled Chicken"
+          />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Grilled Chicken</h3>
+              <span class="price">₹200</span>
+            </div>
+
+            <p>Smoky grilled chicken served with fresh vegetables.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.9</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="menu-card">
+          <span class="food-badge">Fresh</span>
+
+          <img src="/assets/images/salad.avif" alt="Caesar Salad" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Caesar Salad</h3>
+              <span class="price">₹100</span>
+            </div>
+
+            <p>Crispy lettuce, parmesan cheese and signature dressing.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.7</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="menu-card" data-category="chicken">
+          <span class="food-badge">Chef Choice</span>
+
+          <img src="/assets/images/mexican-texas.avif" alt="Tacos" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Mexican Tacos</h3>
+              <span class="price">₹140</span>
+            </div>
+
+            <p>Authentic tacos loaded with fresh fillings and salsa.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.8</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="menu-card" data-category="dessert">
+          <span class="food-badge">Sweet</span>
+
+          <img src="/assets/images/Chocolate Cake.avif" alt="Chocolate Cake" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Chocolate Cake</h3>
+              <span class="price">₹80</span>
+            </div>
+
+            <p>Soft chocolate cake layered with rich cream frosting.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.9</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="menu-card">
+          <span class="food-badge">Premium</span>
+
+          <img
+            src="/assets/images/Seafood Platter.avif"
+            alt="Seafood Platter"
+          />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Seafood Platter</h3>
+              <span class="price">₹280</span>
+            </div>
+
+            <p>Fresh seafood selection served with house special sauce.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 5.0</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="menu-card">
+          <span class="food-badge">New</span>
+
+          <img src="/assets/images/Fresh Sushi.avif" alt="Sushi" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Fresh Sushi</h3>
+              <span class="price">₹220</span>
+            </div>
+
+            <p>Japanese sushi rolls prepared with premium ingredients.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.8</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="menu-card" data-category="dessert">
+          <span class="food-badge">Best Seller</span>
+
+          <img src="/assets/images/Vanilla Sundae.avif" alt="Ice Cream" />
+
+          <div class="menu-content">
+            <div class="menu-top">
+              <h3>Vanilla Sundae</h3>
+              <span class="price">₹70</span>
+            </div>
+
+            <p>Classic vanilla sundae topped with chocolate syrup.</p>
+
+            <div class="menu-bottom">
+              <span>⭐ 4.9</span>
+              <button>Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact & Reservation Section -->
-    <section id="contact" class="contact-section">
-        <h2>Book A Table / Contact Us</h2>
-        <form id="contact-form">
-            <div class="form-group">
-                <input type="text" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <select id="guests" required>
-                    <option value="" disabled selected>Number of Guests</option>
-                    <option value="1">1 Person</option>
-                    <option value="2">2 People</option>
-                    <option value="4">4 People</option>
-                    <option value="4+">4+ People</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-submit">Book Now</button>
-        </form>
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-text">
+          <span class="about-tag"> Our Story </span>
+
+          <h2>Bringing People Together Through Great Food</h2>
+
+          <p>
+            Since 2020, SpiceRoute has been serving handcrafted dishes made from
+            fresh ingredients and authentic recipes. Every meal is carefully
+            prepared by our expert chefs to create an unforgettable dining
+            experience.
+          </p>
+
+          <div class="about-features">
+            <div class="feature">✅ Fresh Ingredients</div>
+
+            <div class="feature">👨‍🍳 Expert Chefs</div>
+
+            <div class="feature">⭐ 4.9 Customer Rating</div>
+
+            <div class="feature">🍽️ Premium Dining</div>
+          </div>
+
+          <a href="#contact" class="btn"> Book A Table </a>
+        </div>
+
+        <div class="about-image">
+          <div class="floating-rating">⭐ Rated #1 Restaurant</div>
+
+          <img src="/assets/images/restro.avif" alt="Restaurant Interior" />
+
+          <div class="experience-card">
+            <h3>5+</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 SpiceRoute Restaurant. All rights reserved.</p>
+    <section id="contact" class="contact">
+      <div class="contact-wrapper">
+        <div class="reservation-card">
+          <span class="contact-tag"> Reservation </span>
+
+          <h2>Book Your Dining Experience</h2>
+
+          <p>
+            Reserve your table today and enjoy an unforgettable culinary journey
+            with our chef-crafted menu.
+          </p>
+
+          <form class="reservation-form">
+            <div class="input-group">
+              <input type="text" placeholder="👤 Your Name" required />
+            </div>
+
+            <div class="input-group">
+              <input type="email" placeholder="📧 Email Address" required />
+            </div>
+
+            <div class="input-group">
+              <input type="tel" placeholder="📱 Phone Number" />
+            </div>
+
+            <div class="input-group">
+              <select>
+                <option selected disabled>🍽️ Number of Guests</option>
+                <option>1 Person</option>
+                <option>2 People</option>
+                <option>4 People</option>
+                <option>6+ People</option>
+              </select>
+            </div>
+
+            <button type="submit" class="reserve-btn">Reserve Table →</button>
+          </form>
+        </div>
+
+        <div class="contact-image">
+          <img src="/assets/images/restaurant.avif" alt="Restaurant" />
+
+          <div class="floating-info">⭐ 4.9 Rating</div>
+
+          <div class="floating-hours">
+            🕒 Open Daily
+            <span>10 AM - 11 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>Spice<span>Route</span></h2>
+
+          <p>
+            Serving unforgettable dining experiences with authentic flavors,
+            premium ingredients, and exceptional hospitality.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+
+          <p>📍 Bhopal, India</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📧 hello@spiceroute.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SpiceRoute. Crafted with ❤️ and good food.</p>
+      </div>
     </footer>
 
+    <button id="scrollTopBtn">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+  
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
