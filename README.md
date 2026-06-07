@@ -6,7 +6,7 @@ A modern and responsive restaurant landing page built with HTML, CSS, and JavaSc
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-🚀 Live Demo: https://your-demo-link.com
+
 
 ![SpiceRoute Banner](https://images.unsplash.com/photo-1414235077428-338989a2e8c0)
 
