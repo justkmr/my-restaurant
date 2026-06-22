@@ -1,6 +1,6 @@
 # 🍽️ SpiceRoute
 
-A modenr and responsive restaurant landing page built with HTML, CSS, and JavaScript. Designed to deliver a premium dining experience through elegant UI, smooth interactions, and mobile-first responsiveness.
+A modern and responsive restaurant landing page built with HTML, CSS, and JavaScript. Designed to deliver a premium dining experience through elegant UI, smooth interactions, and mobile-first responsiveness.
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
